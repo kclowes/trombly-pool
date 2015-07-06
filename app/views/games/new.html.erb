@@ -1,0 +1,24 @@
+<% if @game.errors.any? %>
+  <% @game.errors.full_messages.each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+<%= form_for @game do |f| %>
+  <%= f.label :bowl %>
+  <%= f.text_field :bowl %>
+
+  <%= f.label :home_team %>
+  <%= f.text_field :home_team %>
+
+  <%= f.label :away_team %>
+  <%= f.text_field :away_team %>
+
+  <%= f.label :date %>
+  <%= f.date_select :date %>
+
+  <%= f.label :spread %>
+  <%= f.text_field :spread %>
+
+  <%= f.submit %>
+<% end %>

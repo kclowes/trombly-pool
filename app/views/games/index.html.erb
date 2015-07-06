@@ -1,0 +1,18 @@
+<% @games.each do |game| %>
+  <table>
+    <tr>
+      <th>Bowl</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Date</th>
+      <th>Spread</th>
+    </tr>
+    <tr>
+      <td><%= game.home_team %></td>
+      <td><%= game.away_team %></td>
+      <td><%= game.bowl %></td>
+      <td><%= game.date %></td>
+      <td><%= game.spread %></td>
+    </tr>
+  </table>
+<% end %>
