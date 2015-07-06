@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<nav class="navbar navbar-default">
+  <% if current_user %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-brand pull-right" %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path, class: "navbar-brand pull-right" %>
+    <%= link_to "Register", new_user_registration_path, class: "navbar-brand pull-right" %>
+  <% end %>
+
+  <% if current_user && current_user.admin? %>
+    <%= link_to "Add Game", new_game_path, class: "navbar-brand" %>
+  <% end %>
+</nav>
+
 <%= yield %>
 
 </body>
