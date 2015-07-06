@@ -23,6 +23,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:home_team, :away_team, :bowl)
+    params.require(:game).permit(:home_team, :away_team, :bowl, :date, :spread)
   end
 end

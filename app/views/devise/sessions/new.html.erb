@@ -1,7 +1,6 @@
 <h2 class="jumbotron text-center">Sign In</h2>
 
-<div class="col-xs-3"></div>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col-xs-6"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col-xs-6 col-xs-offset-3"}) do |f| %>
   <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
